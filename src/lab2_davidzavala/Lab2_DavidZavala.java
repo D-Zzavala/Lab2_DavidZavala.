@@ -16,7 +16,6 @@ public class Lab2_DavidZavala {
 
     static Scanner read = new Scanner(System.in);
     static Empleados Emp = new Empleados();
-
     static ArrayList All = new ArrayList();
     static ArrayList Man = new ArrayList();
     static ArrayList Ase = new ArrayList();
@@ -30,16 +29,17 @@ public class Lab2_DavidZavala {
         while (sn == 's') {
             System.out.println("1. Registro de Emplados");
             System.out.println("2. Despedir Empleados");
-            System.out.println("3. ");
-            System.out.println("4. ");
-            System.out.println("5. ");
-            System.out.println("6. ");
-            System.out.println("7. ");
+            System.out.println("3. Log in");
+            System.out.println("4. Ascender Cajero");
+            System.out.println("5. Listar Empleados");
+            System.out.println("6. Modificar Empleado");
+            System.out.println("7. RANDOM");
             System.out.println("0. Salir");
             int op = read.nextInt();
             switch (op) {
                 case 1: {
                     if (tf == true) {
+                      //  AgregarEmpleado();
                         System.out.println("1. Nombre");
                         String nombre = read.next();
                         Emp.setNombre(nombre);
@@ -111,27 +111,31 @@ public class Lab2_DavidZavala {
                         System.out.println("9. Cargo");
                         System.out.println("1. Gerente ||| 2. Aseador ||| 3. Cajero ||| 4. Seguridad");
                         int car = read.nextInt();
-                        boolean ccc = false;
-                        while (ccc) {
+                        {
                             switch (car) {
                                 case 1:
-                                    Emp.setCargo("Gerente");
+                                    String cargo = "Gerente";
+                                    Emp.setCargo(cargo);
                                     break;
                                 case 2:
-                                    Emp.setCargo("Aseador");
+                                    cargo = "Aseador";
+                                    Emp.setCargo(cargo);
                                     break;
                                 case 3:
-                                    Emp.setCargo("Cajero");
+                                    cargo = "Cajero";
+                                    Emp.setCargo(cargo);
                                     break;
                                 case 4:
-                                    Emp.setCargo("Seguridad");
+                                    cargo = "Seguridad";
+                                    Emp.setCargo(cargo);
                                     break;
                                 default:
                             }
+
                         }
                     }
-                    break;
                 }
+                break;
                 case 2: {
                     if (tf == true) {
 
@@ -187,4 +191,8 @@ public class Lab2_DavidZavala {
             }
         }
     }
+
+    /* static void AgregarEmpleado() {
+    
+    }*/
 }
